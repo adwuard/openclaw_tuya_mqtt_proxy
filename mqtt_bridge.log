@@ -1,0 +1,535 @@
+2026-02-13 21:39:43,147 - __main__ - INFO - 🚀 启动 MQTT-OpenClaw 桥接服务...
+2026-02-13 21:39:43,148 - __main__ - INFO - 📍 MQTT Broker: localhost:1883
+2026-02-13 21:39:43,148 - __main__ - INFO - 📥 监听 Topic: AI_CMD
+2026-02-13 21:39:43,149 - __main__ - INFO - 📤 发布 Topic: AI_RET
+2026-02-13 21:39:43,151 - __main__ - INFO - ⏳ 等待消息...
+2026-02-13 21:39:43,152 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:39:43,153 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:42:23,111 - __main__ - INFO - 📨 收到消息 - Topic: AI_CMD, Payload: {"message": "帮我新建一个文件夹", "request_id": "test_1770990142"}
+2026-02-13 21:42:23,112 - __main__ - INFO - 🤖 正在调用 OpenClaw 处理指令: 帮我新建一个文件夹
+2026-02-13 21:42:47,001 - __main__ - INFO - 📤 已发布结果到 topic: AI_RET
+2026-02-13 21:42:47,001 - __main__ - INFO - 📋 返回内容: 好的！我来帮你新建一个文件夹。请问你希望：
+
+1. **文件夹名称**是什么？
+2. **创建位置**在哪里？（比如桌面、当前目录、或其他特定路径）
+
+如果你没有特别要求，我可以直接在桌面上创建一个默认名称的文件夹。
+2026-02-13 21:58:34,453 - __main__ - INFO - 🚀 启动 MQTT-OpenClaw 桥接服务...
+2026-02-13 21:58:34,454 - __main__ - INFO - 📍 MQTT Broker: localhost:1883
+2026-02-13 21:58:34,455 - __main__ - INFO - 📥 监听 Topic: AI_CMD
+2026-02-13 21:58:34,455 - __main__ - INFO - 📤 发布 Topic: AI_RET
+2026-02-13 21:58:34,458 - __main__ - INFO - ⏳ 等待消息...
+2026-02-13 21:58:34,459 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:58:34,459 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:58:34,460 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:58:35,462 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:58:35,462 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:58:35,463 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:58:36,465 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:58:36,466 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:58:36,467 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:58:37,469 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:58:37,469 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:58:37,470 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:58:38,471 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:58:38,471 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:58:38,471 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:58:39,474 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:58:39,474 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:58:39,475 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:58:40,478 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:58:40,479 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:58:40,479 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:58:41,482 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:58:41,482 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:58:41,483 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:58:42,486 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:58:42,486 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:58:42,487 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:58:43,489 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:58:43,489 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:58:43,490 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:58:44,493 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:58:44,493 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:58:44,494 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:58:45,496 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:58:45,496 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:58:45,497 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:58:46,503 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:58:46,503 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:58:46,503 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:58:47,505 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:58:47,506 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:58:47,506 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:58:47,887 - __main__ - INFO - 
+🛑 收到停止信号，正在关闭...
+2026-02-13 21:58:47,887 - __main__ - INFO - 👋 服务已停止
+2026-02-13 21:59:19,009 - __main__ - INFO - 🚀 启动 MQTT-OpenClaw 桥接服务...
+2026-02-13 21:59:19,010 - __main__ - INFO - 📍 MQTT Broker: localhost:1883
+2026-02-13 21:59:19,010 - __main__ - INFO - 📥 监听 Topic: AI_CMD
+2026-02-13 21:59:19,011 - __main__ - INFO - 📤 发布 Topic: AI_RET
+2026-02-13 21:59:19,013 - __main__ - INFO - ⏳ 等待消息...
+2026-02-13 21:59:19,014 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:59:19,016 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:59:19,017 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:59:20,018 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:59:20,019 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:59:20,019 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:59:21,025 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:59:21,025 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:59:21,025 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:59:22,032 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:59:22,032 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:59:22,032 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:59:23,035 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:59:23,036 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:59:23,037 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:59:24,041 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:59:24,041 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:59:24,042 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:59:25,045 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:59:25,046 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:59:25,046 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:59:26,052 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:59:26,053 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:59:26,054 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:59:27,058 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:59:27,059 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:59:27,060 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:59:28,063 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:59:28,063 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:59:28,064 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:59:29,067 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:59:29,067 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:59:29,068 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:59:30,071 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:59:30,071 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:59:30,072 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:59:31,075 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:59:31,075 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:59:31,076 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:59:32,078 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:59:32,079 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:59:32,079 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:59:33,082 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:59:33,082 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:59:33,083 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:59:34,085 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:59:34,085 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:59:34,086 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:59:35,089 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:59:35,089 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:59:35,090 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:59:36,095 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:59:36,094 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:59:36,096 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:59:37,103 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:59:37,104 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:59:37,105 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:59:38,107 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:59:38,107 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:59:40,890 - __main__ - INFO - 🚀 启动 MQTT-OpenClaw 桥接服务...
+2026-02-13 21:59:40,891 - __main__ - INFO - 📍 MQTT Broker: localhost:1883
+2026-02-13 21:59:40,891 - __main__ - INFO - 📥 监听 Topic: AI_CMD
+2026-02-13 21:59:40,891 - __main__ - INFO - 📤 发布 Topic: AI_RET
+2026-02-13 21:59:40,893 - __main__ - INFO - ⏳ 等待消息...
+2026-02-13 21:59:40,895 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:59:40,896 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:59:40,897 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:59:41,900 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:59:41,901 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:59:41,901 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:59:42,906 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:59:42,906 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:59:42,907 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:59:43,909 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:59:43,909 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:59:43,910 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:59:44,912 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:59:44,912 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:59:44,913 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:59:45,916 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:59:45,917 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:59:45,918 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:59:46,920 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:59:46,920 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:59:46,922 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:59:47,923 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:59:47,923 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:59:47,924 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:59:48,926 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:59:48,926 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:59:48,927 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:59:49,929 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:59:49,929 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:59:49,930 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:59:50,933 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:59:50,934 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:59:50,935 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:59:51,937 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 21:59:51,937 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 21:59:51,938 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 21:59:52,377 - __main__ - INFO - 
+🛑 收到停止信号，正在关闭...
+2026-02-13 21:59:52,378 - __main__ - INFO - 👋 服务已停止
+2026-02-13 22:01:27,383 - __main__ - INFO - 🚀 启动 MQTT-OpenClaw 桥接服务...
+2026-02-13 22:01:27,384 - __main__ - INFO - 📍 MQTT Broker: localhost:1883
+2026-02-13 22:01:27,385 - __main__ - INFO - 📥 监听 Topic: AI_CMD
+2026-02-13 22:01:27,386 - __main__ - INFO - 📤 发布 Topic: AI_RET
+2026-02-13 22:01:27,389 - __main__ - INFO - ⏳ 等待消息...
+2026-02-13 22:01:27,393 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:01:27,392 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:01:27,395 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:01:28,398 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:01:28,398 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:01:28,401 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:01:29,402 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:01:29,403 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:01:29,404 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:01:30,406 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:01:30,407 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:01:30,407 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:01:31,410 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:01:31,410 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:01:31,411 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:01:31,964 - __main__ - INFO - 
+🛑 收到停止信号，正在关闭...
+2026-02-13 22:01:31,965 - __main__ - INFO - 🔌 已断开 MQTT 连接
+2026-02-13 22:01:31,967 - __main__ - INFO - 👋 服务已停止
+2026-02-13 22:01:32,414 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:01:32,415 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:03:08,817 - __main__ - INFO - 🚀 启动 MQTT-OpenClaw 桥接服务...
+2026-02-13 22:03:08,818 - __main__ - INFO - 📍 MQTT Broker: localhost:1883
+2026-02-13 22:03:08,818 - __main__ - INFO - 📥 监听 Topic: AI_CMD
+2026-02-13 22:03:08,818 - __main__ - INFO - 📤 发布 Topic: AI_RET
+2026-02-13 22:03:08,819 - __main__ - INFO - ⏳ 等待消息...
+2026-02-13 22:03:08,820 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:03:08,820 - __main__ - ERROR - ❌ 服务启动失败: OpenClawBridge.on_connect() takes 5 positional arguments but 6 were given
+Traceback (most recent call last):
+  File "/home/luoben/mqtt_openclaw_bridge/mqtt_openclaw_bridge.py", line 189, in start
+    self.client.loop_forever()
+  File "/home/luoben/.local/lib/python3.12/site-packages/paho/mqtt/client.py", line 2297, in loop_forever
+    rc = self._loop(timeout)
+         ^^^^^^^^^^^^^^^^^^^
+  File "/home/luoben/.local/lib/python3.12/site-packages/paho/mqtt/client.py", line 1686, in _loop
+    rc = self.loop_read()
+         ^^^^^^^^^^^^^^^^
+  File "/home/luoben/.local/lib/python3.12/site-packages/paho/mqtt/client.py", line 2100, in loop_read
+    rc = self._packet_read()
+         ^^^^^^^^^^^^^^^^^^^
+  File "/home/luoben/.local/lib/python3.12/site-packages/paho/mqtt/client.py", line 3142, in _packet_read
+    rc = self._packet_handle()
+         ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/luoben/.local/lib/python3.12/site-packages/paho/mqtt/client.py", line 3814, in _packet_handle
+    return self._handle_connack()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/luoben/.local/lib/python3.12/site-packages/paho/mqtt/client.py", line 3934, in _handle_connack
+    on_connect(
+TypeError: OpenClawBridge.on_connect() takes 5 positional arguments but 6 were given
+2026-02-13 22:03:09,833 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:03:09,834 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:08:14,487 - __main__ - INFO - 🚀 启动 MQTT-OpenClaw 桥接服务...
+2026-02-13 22:08:14,488 - __main__ - INFO - 📍 MQTT Broker: localhost:1883
+2026-02-13 22:08:14,488 - __main__ - INFO - 📥 监听 Topic: AI_CMD
+2026-02-13 22:08:14,489 - __main__ - INFO - 📤 发布 Topic: AI_RET
+2026-02-13 22:08:14,491 - __main__ - INFO - ⏳ 等待消息...
+2026-02-13 22:08:14,491 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:08:14,492 - __main__ - ERROR - ❌ 服务启动失败: OpenClawBridge.on_connect() takes 5 positional arguments but 6 were given
+Traceback (most recent call last):
+  File "/home/luoben/mqtt_openclaw_bridge/mqtt_openclaw_bridge.py", line 189, in start
+    self.client.loop_forever()
+  File "/home/luoben/.local/lib/python3.12/site-packages/paho/mqtt/client.py", line 2297, in loop_forever
+    rc = self._loop(timeout)
+         ^^^^^^^^^^^^^^^^^^^
+  File "/home/luoben/.local/lib/python3.12/site-packages/paho/mqtt/client.py", line 1686, in _loop
+    rc = self.loop_read()
+         ^^^^^^^^^^^^^^^^
+  File "/home/luoben/.local/lib/python3.12/site-packages/paho/mqtt/client.py", line 2100, in loop_read
+    rc = self._packet_read()
+         ^^^^^^^^^^^^^^^^^^^
+  File "/home/luoben/.local/lib/python3.12/site-packages/paho/mqtt/client.py", line 3142, in _packet_read
+    rc = self._packet_handle()
+         ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/luoben/.local/lib/python3.12/site-packages/paho/mqtt/client.py", line 3814, in _packet_handle
+    return self._handle_connack()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/luoben/.local/lib/python3.12/site-packages/paho/mqtt/client.py", line 3934, in _handle_connack
+    on_connect(
+TypeError: OpenClawBridge.on_connect() takes 5 positional arguments but 6 were given
+2026-02-13 22:08:15,494 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:08:15,495 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:10:26,449 - __main__ - INFO - 🚀 启动 MQTT-OpenClaw 桥接服务...
+2026-02-13 22:10:26,450 - __main__ - INFO - 📍 MQTT Broker: localhost:1883
+2026-02-13 22:10:26,451 - __main__ - INFO - 📥 监听 Topic: AI_CMD
+2026-02-13 22:10:26,452 - __main__ - INFO - 📤 发布 Topic: AI_RET
+2026-02-13 22:10:26,454 - __main__ - INFO - ⏳ 等待消息...
+2026-02-13 22:10:26,455 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:10:26,456 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:10:26,457 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:10:27,459 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:10:27,460 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:10:27,460 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:10:28,463 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:10:28,463 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:10:28,464 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:10:29,466 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:10:29,467 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:10:29,467 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:10:30,469 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:10:30,469 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:10:30,470 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:10:31,473 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:10:31,473 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:10:31,475 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:10:32,476 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:10:32,476 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:10:32,477 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:10:33,481 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:10:33,481 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:10:33,482 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:10:34,484 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:10:34,484 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:10:34,485 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:10:35,488 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:10:35,488 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:10:35,489 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:10:36,491 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:10:36,492 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:10:36,494 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:10:37,494 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:10:37,495 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:10:37,495 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:10:38,498 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:10:38,498 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:10:38,499 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:10:39,501 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:10:39,501 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:10:39,501 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:10:40,504 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:10:40,504 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:10:40,505 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:10:41,508 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:10:41,508 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:10:41,509 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:10:42,511 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:10:42,512 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:10:42,512 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:10:43,515 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:10:43,515 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:10:43,516 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:10:43,586 - __main__ - INFO - 
+🛑 收到停止信号，正在关闭...
+2026-02-13 22:10:43,587 - __main__ - INFO - 👋 服务已停止
+2026-02-13 22:12:14,657 - __main__ - INFO - 🚀 启动 MQTT-OpenClaw 桥接服务...
+2026-02-13 22:12:14,658 - __main__ - INFO - 📍 MQTT Broker: localhost:1883
+2026-02-13 22:12:14,659 - __main__ - INFO - 📥 监听 Topic: AI_CMD
+2026-02-13 22:12:14,659 - __main__ - INFO - 📤 发布 Topic: AI_RET
+2026-02-13 22:12:14,661 - __main__ - INFO - ⏳ 等待消息...
+2026-02-13 22:12:14,664 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:12:14,665 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:12:14,666 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:12:15,669 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:12:15,669 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:12:15,670 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:12:16,673 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:12:16,673 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:12:16,674 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:12:17,677 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:12:17,677 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:12:17,678 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:12:18,681 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:12:18,682 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:12:18,683 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:12:18,771 - __main__ - INFO - 
+🛑 收到停止信号，正在关闭...
+2026-02-13 22:12:18,772 - __main__ - INFO - 🔌 已断开 MQTT 连接
+2026-02-13 22:12:18,773 - __main__ - INFO - 👋 服务已停止
+2026-02-13 22:12:19,686 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:12:19,687 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:12:27,128 - __main__ - INFO - 📨 收到消息 - Topic: AI_CMD, Payload: {"message": "今天深圳天气怎么样", "request_id": "test_1770991946"}
+2026-02-13 22:12:27,128 - __main__ - INFO - 🤖 正在调用 OpenClaw 处理指令: 今天深圳天气怎么样
+2026-02-13 22:12:57,154 - __main__ - INFO - 📤 已发布结果到 topic: AI_RET
+2026-02-13 22:12:57,155 - __main__ - INFO - 📋 返回内容: 我理解你很想知道深圳今天的天气情况，但我目前仍然无法直接获取实时天气数据，因为缺少网络搜索的API配置。
+
+不过我可以给你一些实用的建议：
+
+**快速查看深圳天气的方法：**
+1. 打开手机自带的天气应用查看
+2. 访问中国天气网（www.weather.com.cn）搜索"深圳"
+3. 在微信中搜索"深圳天气"小程序
+4. 使用百度搜索"深圳天气"
+
+**根据季节的一般建议：**
+现在是2月中旬...
+2026-02-13 22:15:49,378 - __main__ - INFO - 🚀 启动 MQTT-OpenClaw 桥接服务...
+2026-02-13 22:15:49,379 - __main__ - INFO - 📍 MQTT Broker: localhost:1883
+2026-02-13 22:15:49,379 - __main__ - INFO - 📥 监听 Topic: AI_CMD
+2026-02-13 22:15:49,380 - __main__ - INFO - 📤 发布 Topic: AI_RET
+2026-02-13 22:15:49,382 - __main__ - INFO - ⏳ 等待消息...
+2026-02-13 22:15:49,383 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:15:49,384 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:15:49,385 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:15:50,386 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:15:50,386 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:15:50,386 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:15:51,388 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:15:51,389 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:15:51,389 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:15:52,392 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:15:52,392 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:15:52,393 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:15:53,394 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:15:53,394 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:15:53,394 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:15:54,397 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:15:54,397 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:15:54,398 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:15:55,401 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:15:55,401 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:15:55,402 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:15:56,406 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:15:56,407 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:15:56,408 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:15:57,410 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:15:57,410 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:15:57,410 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:15:58,414 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:15:58,414 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:15:58,414 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:15:59,416 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:15:59,416 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:15:59,417 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:00,418 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:00,418 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:00,418 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:01,420 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:01,421 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:01,421 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:02,423 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:02,424 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:02,425 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:03,427 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:03,427 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:03,428 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:04,429 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:04,429 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:04,430 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:05,432 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:05,432 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:05,432 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:06,434 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:06,434 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:06,434 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:07,437 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:07,437 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:07,437 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:08,439 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:08,439 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:08,439 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:09,442 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:09,442 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:09,442 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:10,445 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:10,445 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:10,446 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:11,448 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:11,448 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:11,449 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:12,451 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:12,451 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:12,452 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:13,455 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:13,455 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:13,456 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:14,458 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:14,458 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:14,459 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:15,460 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:15,460 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:15,461 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:16,463 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:16,463 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:16,463 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:17,466 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:17,466 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:17,467 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:18,469 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:18,469 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:18,470 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:19,472 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:19,473 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:19,473 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:20,475 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:20,475 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:20,476 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:21,478 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:21,478 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:21,479 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:22,482 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:22,482 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:22,482 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:23,485 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:23,485 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:23,486 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:24,487 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:24,487 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:24,488 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:25,490 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:25,490 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:25,491 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:26,493 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:26,493 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:26,494 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:27,496 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:27,496 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:27,497 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:28,498 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:28,499 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:28,499 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:29,502 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:29,502 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:29,503 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:30,504 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:30,504 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:30,504 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:31,507 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:31,507 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:31,507 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:32,510 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:32,511 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:32,513 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:33,516 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:33,517 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:33,517 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:34,519 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:34,519 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:34,520 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:35,522 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:35,522 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:35,522 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:36,525 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:36,525 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:36,526 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:37,528 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:37,528 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:37,529 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:38,531 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:38,531 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:38,532 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:39,533 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:39,534 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:39,534 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:40,535 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:16:40,535 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:16:40,535 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:16:41,144 - __main__ - INFO - 
+🛑 收到停止信号，正在关闭...
+2026-02-13 22:16:41,145 - __main__ - INFO - 👋 服务已停止
+2026-02-13 22:19:03,733 - __main__ - INFO - 🚀 启动 MQTT-OpenClaw 桥接服务...
+2026-02-13 22:19:03,734 - __main__ - INFO - 📍 MQTT Broker: localhost:1883
+2026-02-13 22:19:03,734 - __main__ - INFO - 📥 监听 Topic: AI_CMD
+2026-02-13 22:19:03,735 - __main__ - INFO - 📤 发布 Topic: AI_RET
+2026-02-13 22:19:03,735 - __main__ - INFO - 🆔 客户端ID: openclaw_bridge_32759
+2026-02-13 22:19:03,737 - __main__ - INFO - ⏳ 等待消息...
+2026-02-13 22:19:03,738 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:19:03,739 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
