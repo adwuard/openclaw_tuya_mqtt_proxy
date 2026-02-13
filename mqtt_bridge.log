@@ -533,3 +533,213 @@ TypeError: OpenClawBridge.on_connect() takes 5 positional arguments but 6 were g
 2026-02-13 22:19:03,737 - __main__ - INFO - ⏳ 等待消息...
 2026-02-13 22:19:03,738 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
 2026-02-13 22:19:03,739 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:20:26,574 - __main__ - INFO - 
+🛑 收到停止信号，正在关闭...
+2026-02-13 22:20:26,575 - __main__ - INFO - 🔌 已断开 MQTT 连接
+2026-02-13 22:20:26,576 - __main__ - INFO - 👋 服务已停止
+2026-02-13 22:20:28,412 - __main__ - INFO - 🚀 启动 MQTT-OpenClaw 桥接服务...
+2026-02-13 22:20:28,413 - __main__ - INFO - 📍 MQTT Broker: localhost:1883
+2026-02-13 22:20:28,414 - __main__ - INFO - 📥 监听 Topic: AI_CMD
+2026-02-13 22:20:28,415 - __main__ - INFO - 📤 发布 Topic: AI_RET
+2026-02-13 22:20:28,415 - __main__ - INFO - 🆔 客户端ID: openclaw_bridge_33464
+2026-02-13 22:20:28,418 - __main__ - INFO - ⏳ 等待消息...
+2026-02-13 22:20:28,419 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: localhost:1883
+2026-02-13 22:20:28,420 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:20:30,727 - __main__ - INFO - 
+🛑 收到停止信号，正在关闭...
+2026-02-13 22:20:30,728 - __main__ - INFO - 🔌 已断开 MQTT 连接
+2026-02-13 22:20:30,729 - __main__ - INFO - 👋 服务已停止
+2026-02-13 22:20:42,548 - __main__ - INFO - 🚀 启动 MQTT-OpenClaw 桥接服务...
+2026-02-13 22:20:42,548 - __main__ - INFO - 📍 MQTT Broker: 192.168.254.129:1883
+2026-02-13 22:20:42,548 - __main__ - INFO - 📥 监听 Topic: AI_CMD
+2026-02-13 22:20:42,548 - __main__ - INFO - 📤 发布 Topic: AI_RET
+2026-02-13 22:20:42,548 - __main__ - INFO - 🆔 客户端ID: openclaw_bridge_33561
+2026-02-13 22:20:42,549 - __main__ - ERROR - ❌ 连接失败: [Errno 111] Connection refused
+2026-02-13 22:20:42,549 - __main__ - ERROR -    请检查:
+2026-02-13 22:20:42,549 - __main__ - ERROR -    1. Mosquitto 是否运行: sudo systemctl status mosquitto
+2026-02-13 22:20:42,549 - __main__ - ERROR -    2. 端口是否正确: netstat -tlnp | grep 1883
+2026-02-13 22:20:42,549 - __main__ - ERROR -    3. IP 地址是否正确
+2026-02-13 22:26:02,386 - __main__ - INFO - 🚀 启动 MQTT-OpenClaw 桥接服务...
+2026-02-13 22:26:02,387 - __main__ - INFO - 📍 MQTT Broker: 192.168.254.129:1883
+2026-02-13 22:26:02,387 - __main__ - INFO - 📥 监听 Topic: AI_CMD
+2026-02-13 22:26:02,388 - __main__ - INFO - 📤 发布 Topic: AI_RET
+2026-02-13 22:26:02,389 - __main__ - INFO - 🆔 客户端ID: openclaw_bridge_35210
+2026-02-13 22:26:02,391 - __main__ - ERROR - ❌ 连接失败: [Errno 111] Connection refused
+2026-02-13 22:26:02,391 - __main__ - ERROR -    请检查:
+2026-02-13 22:26:02,392 - __main__ - ERROR -    1. Mosquitto 是否运行: sudo systemctl status mosquitto
+2026-02-13 22:26:02,392 - __main__ - ERROR -    2. 端口是否正确: netstat -tlnp | grep 1883
+2026-02-13 22:26:02,392 - __main__ - ERROR -    3. IP 地址是否正确
+2026-02-13 22:28:20,748 - __main__ - INFO - 🚀 启动 MQTT-OpenClaw 桥接服务...
+2026-02-13 22:28:20,749 - __main__ - INFO - 📍 MQTT Broker: 192.168.254.129:1883
+2026-02-13 22:28:20,749 - __main__ - INFO - 📥 监听 Topic: AI_CMD
+2026-02-13 22:28:20,749 - __main__ - INFO - 📤 发布 Topic: AI_RET
+2026-02-13 22:28:20,749 - __main__ - INFO - 🆔 客户端ID: openclaw_bridge_36623
+2026-02-13 22:28:20,750 - __main__ - INFO - ⏳ 等待消息...
+2026-02-13 22:28:20,751 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: 192.168.254.129:1883
+2026-02-13 22:28:20,751 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:28:47,759 - __main__ - INFO - 🚀 启动 MQTT-OpenClaw 桥接服务...
+2026-02-13 22:28:47,760 - __main__ - INFO - 📍 MQTT Broker: 192.168.254.129:1883
+2026-02-13 22:28:47,760 - __main__ - INFO - 📥 监听 Topic: AI_CMD
+2026-02-13 22:28:47,761 - __main__ - INFO - 📤 发布 Topic: AI_RET
+2026-02-13 22:28:47,761 - __main__ - INFO - 🆔 客户端ID: openclaw_bridge_36804
+2026-02-13 22:28:47,762 - __main__ - INFO - ⏳ 等待消息...
+2026-02-13 22:28:47,764 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: 192.168.254.129:1883
+2026-02-13 22:28:47,764 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:30:16,967 - __main__ - INFO - 📨 收到消息 - Topic: AI_CMD, Payload: 我想打开计算器
+
+2026-02-13 22:30:16,968 - __main__ - INFO - 📝 收到纯文本消息，将直接作为指令处理
+2026-02-13 22:30:16,969 - __main__ - INFO - 🤖 正在调用 OpenClaw 处理指令: 我想打开计算器
+
+2026-02-13 22:31:54,256 - __main__ - INFO - 📤 已发布结果到 topic: AI_RET
+2026-02-13 22:31:54,257 - __main__ - INFO - 📋 返回内容: 我来帮你打开计算器！在Linux系统中，有几种方式可以打开计算器。
+看起来GNOME计算器可能没有安装或者系统使用的是其他桌面环境。让我尝试其他常见的计算器应用：
+让我尝试使用Python的简单计算器，或者检查系统中可用的计算器：
+我看到系统中有 `gnome-calculator` 和 `xcalc`。让我尝试启动 `xcalc`（这是一个更轻量级的计算器）：
+看起来计算器应用已经在后台启动了！...
+2026-02-13 22:31:54,257 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 22:31:55,260 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: 192.168.254.129:1883
+2026-02-13 22:31:55,260 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 22:32:21,536 - __main__ - INFO - 
+🛑 收到停止信号，正在关闭...
+2026-02-13 22:32:21,537 - __main__ - INFO - 🔌 已断开 MQTT 连接
+2026-02-13 22:32:21,538 - __main__ - INFO - 👋 服务已停止
+2026-02-13 22:32:24,016 - __main__ - INFO - 🚀 启动 MQTT-OpenClaw 桥接服务...
+2026-02-13 22:32:24,017 - __main__ - INFO - 📍 MQTT Broker: 192.168.254.129:1883
+2026-02-13 22:32:24,017 - __main__ - INFO - 📥 监听 Topic: AI_CMD
+2026-02-13 22:32:24,017 - __main__ - INFO - 📤 发布 Topic: AI_RET
+2026-02-13 22:32:24,017 - __main__ - INFO - 🆔 客户端ID: openclaw_bridge_37918
+2026-02-13 22:32:24,019 - __main__ - INFO - ⏳ 等待消息...
+2026-02-13 22:32:24,020 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: 192.168.254.129:1883
+2026-02-13 22:32:24,021 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 23:02:53,445 - __main__ - INFO - 🚀 启动 MQTT-OpenClaw 桥接服务...
+2026-02-13 23:02:53,446 - __main__ - INFO - 📍 MQTT Broker: 192.168.254.129:1883
+2026-02-13 23:02:53,446 - __main__ - INFO - 📥 监听 Topic: AI_CMD
+2026-02-13 23:02:53,446 - __main__ - INFO - 📤 发布 Topic: AI_RET
+2026-02-13 23:02:53,447 - __main__ - INFO - 🆔 客户端ID: openclaw_bridge_5222
+2026-02-13 23:02:58,455 - __main__ - ERROR - ❌ 连接失败: timed out
+2026-02-13 23:02:58,455 - __main__ - ERROR -    请检查:
+2026-02-13 23:02:58,455 - __main__ - ERROR -    1. Mosquitto 是否运行: sudo systemctl status mosquitto
+2026-02-13 23:02:58,456 - __main__ - ERROR -    2. 端口是否正确: netstat -tlnp | grep 1883
+2026-02-13 23:02:58,457 - __main__ - ERROR -    3. IP 地址是否正确
+2026-02-13 23:04:22,447 - __main__ - INFO - 🚀 启动 MQTT-OpenClaw 桥接服务...
+2026-02-13 23:04:22,448 - __main__ - INFO - 📍 MQTT Broker: 192.168.100.132:1883
+2026-02-13 23:04:22,448 - __main__ - INFO - 📥 监听 Topic: AI_CMD
+2026-02-13 23:04:22,449 - __main__ - INFO - 📤 发布 Topic: AI_RET
+2026-02-13 23:04:22,450 - __main__ - INFO - 🆔 客户端ID: openclaw_bridge_5608
+2026-02-13 23:04:22,453 - __main__ - ERROR - ❌ 连接失败: [Errno 111] Connection refused
+2026-02-13 23:04:22,453 - __main__ - ERROR -    请检查:
+2026-02-13 23:04:22,454 - __main__ - ERROR -    1. Mosquitto 是否运行: sudo systemctl status mosquitto
+2026-02-13 23:04:22,454 - __main__ - ERROR -    2. 端口是否正确: netstat -tlnp | grep 1883
+2026-02-13 23:04:22,456 - __main__ - ERROR -    3. IP 地址是否正确
+2026-02-13 23:05:22,472 - __main__ - INFO - 🚀 启动 MQTT-OpenClaw 桥接服务...
+2026-02-13 23:05:22,472 - __main__ - INFO - 📍 MQTT Broker: 192.168.100.132:1883
+2026-02-13 23:05:22,473 - __main__ - INFO - 📥 监听 Topic: AI_CMD
+2026-02-13 23:05:22,474 - __main__ - INFO - 📤 发布 Topic: AI_RET
+2026-02-13 23:05:22,474 - __main__ - INFO - 🆔 客户端ID: openclaw_bridge_5747
+2026-02-13 23:05:22,477 - __main__ - ERROR - ❌ 连接失败: [Errno 111] Connection refused
+2026-02-13 23:05:22,477 - __main__ - ERROR -    请检查:
+2026-02-13 23:05:22,478 - __main__ - ERROR -    1. Mosquitto 是否运行: sudo systemctl status mosquitto
+2026-02-13 23:05:22,478 - __main__ - ERROR -    2. 端口是否正确: netstat -tlnp | grep 1883
+2026-02-13 23:05:22,478 - __main__ - ERROR -    3. IP 地址是否正确
+2026-02-13 23:06:00,445 - __main__ - INFO - 🚀 启动 MQTT-OpenClaw 桥接服务...
+2026-02-13 23:06:00,445 - __main__ - INFO - 📍 MQTT Broker: 192.168.100.132:1883
+2026-02-13 23:06:00,446 - __main__ - INFO - 📥 监听 Topic: AI_CMD
+2026-02-13 23:06:00,446 - __main__ - INFO - 📤 发布 Topic: AI_RET
+2026-02-13 23:06:00,447 - __main__ - INFO - 🆔 客户端ID: openclaw_bridge_6374
+2026-02-13 23:06:00,448 - __main__ - ERROR - ❌ 连接失败: [Errno 111] Connection refused
+2026-02-13 23:06:00,449 - __main__ - ERROR -    请检查:
+2026-02-13 23:06:00,450 - __main__ - ERROR -    1. Mosquitto 是否运行: sudo systemctl status mosquitto
+2026-02-13 23:06:00,450 - __main__ - ERROR -    2. 端口是否正确: netstat -tlnp | grep 1883
+2026-02-13 23:06:00,451 - __main__ - ERROR -    3. IP 地址是否正确
+2026-02-13 23:06:55,258 - __main__ - INFO - 🚀 启动 MQTT-OpenClaw 桥接服务...
+2026-02-13 23:06:55,258 - __main__ - INFO - 📍 MQTT Broker: 192.168.100.132:1883
+2026-02-13 23:06:55,259 - __main__ - INFO - 📥 监听 Topic: AI_CMD
+2026-02-13 23:06:55,260 - __main__ - INFO - 📤 发布 Topic: AI_RET
+2026-02-13 23:06:55,260 - __main__ - INFO - 🆔 客户端ID: openclaw_bridge_6620
+2026-02-13 23:06:55,261 - __main__ - ERROR - ❌ 连接失败: [Errno 111] Connection refused
+2026-02-13 23:06:55,262 - __main__ - ERROR -    请检查:
+2026-02-13 23:06:55,262 - __main__ - ERROR -    1. Mosquitto 是否运行: sudo systemctl status mosquitto
+2026-02-13 23:06:55,263 - __main__ - ERROR -    2. 端口是否正确: netstat -tlnp | grep 1883
+2026-02-13 23:06:55,264 - __main__ - ERROR -    3. IP 地址是否正确
+2026-02-13 23:08:07,966 - __main__ - INFO - 🚀 启动 MQTT-OpenClaw 桥接服务...
+2026-02-13 23:08:07,966 - __main__ - INFO - 📍 MQTT Broker: 192.168.100.132:1883
+2026-02-13 23:08:07,967 - __main__ - INFO - 📥 监听 Topic: AI_CMD
+2026-02-13 23:08:07,968 - __main__ - INFO - 📤 发布 Topic: AI_RET
+2026-02-13 23:08:07,969 - __main__ - INFO - 🆔 客户端ID: openclaw_bridge_6753
+2026-02-13 23:08:07,970 - __main__ - ERROR - ❌ 连接失败: [Errno 111] Connection refused
+2026-02-13 23:08:07,971 - __main__ - ERROR -    请检查:
+2026-02-13 23:08:07,971 - __main__ - ERROR -    1. Mosquitto 是否运行: sudo systemctl status mosquitto
+2026-02-13 23:08:07,971 - __main__ - ERROR -    2. 端口是否正确: netstat -tlnp | grep 1883
+2026-02-13 23:08:07,972 - __main__ - ERROR -    3. IP 地址是否正确
+2026-02-13 23:10:16,426 - __main__ - INFO - 🚀 启动 MQTT-OpenClaw 桥接服务...
+2026-02-13 23:10:16,427 - __main__ - INFO - 📍 MQTT Broker: 192.168.100.132:1883
+2026-02-13 23:10:16,427 - __main__ - INFO - 📥 监听 Topic: AI_CMD
+2026-02-13 23:10:16,427 - __main__ - INFO - 📤 发布 Topic: AI_RET
+2026-02-13 23:10:16,428 - __main__ - INFO - 🆔 客户端ID: openclaw_bridge_7664
+2026-02-13 23:10:16,429 - __main__ - INFO - ⏳ 等待消息...
+2026-02-13 23:10:16,430 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: 192.168.100.132:1883
+2026-02-13 23:10:16,431 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 23:10:44,242 - __main__ - INFO - 🚀 启动 MQTT-OpenClaw 桥接服务...
+2026-02-13 23:10:44,243 - __main__ - INFO - 📍 MQTT Broker: 192.168.100.132:1883
+2026-02-13 23:10:44,243 - __main__ - INFO - 📥 监听 Topic: AI_CMD
+2026-02-13 23:10:44,244 - __main__ - INFO - 📤 发布 Topic: AI_RET
+2026-02-13 23:10:44,244 - __main__ - INFO - 🆔 客户端ID: openclaw_bridge_7736
+2026-02-13 23:10:44,246 - __main__ - INFO - ⏳ 等待消息...
+2026-02-13 23:10:44,248 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: 192.168.100.132:1883
+2026-02-13 23:10:44,248 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 23:11:15,610 - __main__ - INFO - 📨 收到消息 - Topic: AI_CMD, Payload: 我想新建一个txt，文件里面写如hello,tuya,并且打开
+
+
+2026-02-13 23:11:15,611 - __main__ - INFO - 📝 收到纯文本消息，将直接作为指令处理
+2026-02-13 23:11:15,611 - __main__ - INFO - 🤖 正在调用 OpenClaw 处理指令: 我想新建一个txt，文件里面写如hello,tuya,并且打开
+
+
+2026-02-13 23:11:24,709 - __main__ - INFO - 🚀 启动 MQTT-OpenClaw 桥接服务...
+2026-02-13 23:11:24,710 - __main__ - INFO - 📍 MQTT Broker: 192.168.100.132:1883
+2026-02-13 23:11:24,711 - __main__ - INFO - 📥 监听 Topic: AI_CMD
+2026-02-13 23:11:24,713 - __main__ - INFO - 📤 发布 Topic: AI_RET
+2026-02-13 23:11:24,713 - __main__ - INFO - 🆔 客户端ID: openclaw_bridge_7889
+2026-02-13 23:11:24,716 - __main__ - INFO - ⏳ 等待消息...
+2026-02-13 23:11:24,717 - __main__ - ERROR - ❌ 服务启动失败: OpenClawBridge.on_connect() takes 5 positional arguments but 6 were given
+Traceback (most recent call last):
+  File "/home/luoben/mqtt_openclaw_bridge/mqtt_openclaw_bridge.py", line 208, in start
+    self.client.loop_forever()
+  File "/home/luoben/.local/lib/python3.12/site-packages/paho/mqtt/client.py", line 2297, in loop_forever
+    rc = self._loop(timeout)
+         ^^^^^^^^^^^^^^^^^^^
+  File "/home/luoben/.local/lib/python3.12/site-packages/paho/mqtt/client.py", line 1686, in _loop
+    rc = self.loop_read()
+         ^^^^^^^^^^^^^^^^
+  File "/home/luoben/.local/lib/python3.12/site-packages/paho/mqtt/client.py", line 2100, in loop_read
+    rc = self._packet_read()
+         ^^^^^^^^^^^^^^^^^^^
+  File "/home/luoben/.local/lib/python3.12/site-packages/paho/mqtt/client.py", line 3142, in _packet_read
+    rc = self._packet_handle()
+         ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/luoben/.local/lib/python3.12/site-packages/paho/mqtt/client.py", line 3814, in _packet_handle
+    return self._handle_connack()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/luoben/.local/lib/python3.12/site-packages/paho/mqtt/client.py", line 3934, in _handle_connack
+    on_connect(
+TypeError: OpenClawBridge.on_connect() takes 5 positional arguments but 6 were given
+2026-02-13 23:12:02,736 - __main__ - INFO - 🚀 启动 MQTT-OpenClaw 桥接服务...
+2026-02-13 23:12:02,737 - __main__ - INFO - 📍 MQTT Broker: 192.168.100.132:1883
+2026-02-13 23:12:02,738 - __main__ - INFO - 📥 监听 Topic: AI_CMD
+2026-02-13 23:12:02,738 - __main__ - INFO - 📤 发布 Topic: AI_RET
+2026-02-13 23:12:02,738 - __main__ - INFO - 🆔 客户端ID: openclaw_bridge_8250
+2026-02-13 23:12:02,739 - __main__ - INFO - ⏳ 等待消息...
+2026-02-13 23:12:02,741 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: 192.168.100.132:1883
+2026-02-13 23:12:02,742 - __main__ - INFO - 📡 已订阅 topic: AI_CMD
+2026-02-13 23:12:11,948 - __main__ - INFO - 📤 已发布结果到 topic: AI_RET
+2026-02-13 23:12:11,949 - __main__ - INFO - 📋 返回内容: 我来帮你创建一个包含"hello,tuya"的txt文件并打开它。
+现在让我打开这个文件：
+已成功创建并打开了文件！📄
+
+- **文件位置**：`/home/luoben/Desktop/hello_tuya.txt`
+- **文件内容**：`hello,tuya`
+- **文件已打开**：系统默认的文本编辑器应该已经打开了这个文件
+
+如果你没有看到文件打开，可能是因为在VMware虚拟机中图形界...
+2026-02-13 23:12:11,949 - __main__ - WARNING - ⚠️  意外断开连接，错误代码: 7
+2026-02-13 23:12:12,951 - __main__ - INFO - ✅ 成功连接到 MQTT Broker: 192.168.100.132:1883
+2026-02-13 23:12:12,952 - __main__ - INFO - 📡 已订阅 topic: AI_CMD

@@ -29,7 +29,7 @@ logger = logging.getLogger(__name__)
 # MQTT 配置
 # 支持从环境变量读取，或直接修改这里的值
 # 可以使用 localhost、IP 地址（如 192.168.1.100）或域名
-MQTT_BROKER = os.getenv("MQTT_BROKER", "localhost")  # MQTT broker 地址
+MQTT_BROKER = os.getenv("MQTT_BROKER", "192.168.100.132")  # MQTT broker 地址
 MQTT_PORT = int(os.getenv("MQTT_PORT", "1883"))      # MQTT broker 端口
 MQTT_TOPIC_CMD = os.getenv("MQTT_TOPIC_CMD", "AI_CMD")  # 接收指令的 topic
 MQTT_TOPIC_RET = os.getenv("MQTT_TOPIC_RET", "AI_RET")  # 发送结果的 topic
@@ -45,13 +45,28 @@ class OpenClawBridge:
     """MQTT-OpenClaw 桥接类"""
     
     def __init__(self):
-        self.client = mqtt.Client(client_id=MQTT_CLIENT_ID)
+        # 使用新的 CallbackAPIVersion 来避免 DeprecationWarning
+        try:
+            # 尝试使用新版本 API (paho-mqtt >= 2.0.0)
+            self.client = mqtt.Client(
+                mqtt.CallbackAPIVersion.VERSION2,
+                client_id=MQTT_CLIENT_ID
+            )
+        except (AttributeError, ValueError):
+            # 回退到旧版本 API (paho-mqtt < 2.0.0) 或 VERSION2 不可用时使用 VERSION1
+            try:
+                self.client = mqtt.Client(
+                    mqtt.CallbackAPIVersion.VERSION1,
+                    client_id=MQTT_CLIENT_ID
+                )
+            except AttributeError:
+                self.client = mqtt.Client(client_id=MQTT_CLIENT_ID)
         self.client.on_connect = self.on_connect
         self.client.on_message = self.on_message
         self.client.on_disconnect = self.on_disconnect
         
-    def on_connect(self, client, userdata, flags, rc):
-        """MQTT 连接回调"""
+    def on_connect(self, client, userdata, flags, rc, properties=None):
+        """MQTT 连接回调（兼容 VERSION1 和 VERSION2 API）"""
         if rc == 0:
             logger.info(f"✅ 成功连接到 MQTT Broker: {MQTT_BROKER}:{MQTT_PORT}")
             # 订阅 AI_CMD topic
@@ -60,8 +75,8 @@ class OpenClawBridge:
         else:
             logger.error(f"❌ 连接失败，错误代码: {rc}")
             
-    def on_disconnect(self, client, userdata, rc):
-        """MQTT 断开连接回调"""
+    def on_disconnect(self, client, userdata, rc, properties=None):
+        """MQTT 断开连接回调（兼容 VERSION1 和 VERSION2 API）"""
         if rc != 0:
             logger.warning(f"⚠️  意外断开连接，错误代码: {rc}")
         else:
