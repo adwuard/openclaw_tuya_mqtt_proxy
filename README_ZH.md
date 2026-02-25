@@ -208,7 +208,6 @@ bash install.sh test-help
 
 3. **消息发送但未收到响应**
    - 检查桥接服务是否正常运行
-   - 查看日志文件：`tail -f mqtt_bridge.log`
 
 ## 许可证
 

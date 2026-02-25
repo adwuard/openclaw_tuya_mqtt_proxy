@@ -169,7 +169,6 @@ python3 openclaw_mqtt_bridge.py
 - Broker connection error: `sudo systemctl status mosquitto`
 - Port check: `ss -tlnp | rg 1883`
 - OpenClaw check: `which openclaw && openclaw --version`
-- Logs: `tail -f mqtt_bridge.log`
 
 ## Script commands
 
