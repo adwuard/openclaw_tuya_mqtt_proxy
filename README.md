@@ -1,187 +1,182 @@
-# MQTT-OpenClaw 桥接服务器
+# MQTT OpenClaw Bridge
 
-这是一个 MQTT 桥接服务，用于将其他设备通过 MQTT 协议与 OpenClaw AI 助手进行通信。
+Minimal MQTT bridge that forwards messages to OpenClaw and publishes responses back.
 
-## 功能说明
+Chinese documentation: `README_ZH.md`
 
-- **监听 AI_CMD topic**：接收其他设备发送的指令
-- **调用 OpenClaw**：将指令传递给 OpenClaw agent 处理
-- **发布到 AI_RET topic**：将 AI 的响应结果发布到 MQTT
+## What it does
 
-## 系统要求
+- Subscribes to `openclaw/device/user_speech_text`
+- Sends message to `openclaw agent --agent main --message "..."`
+- Publishes result to `openclaw/server/response`
 
-- Python 3.6+
-- MQTT Broker (如 Mosquitto)
-- OpenClaw 已安装并配置
+## Requirements
 
-## 安装步骤
+- Python 3
+- MQTT broker (Mosquitto recommended)
+- OpenClaw installed and available as `openclaw`
 
-### 1. 安装 MQTT Broker (Mosquitto)
+## What is Mosquitto?
 
-```bash
-# Ubuntu/Debian
-sudo apt-get update
-sudo apt-get install mosquitto mosquitto-clients
+Mosquitto is a lightweight MQTT broker.  
+In this project, it acts as the message hub:
+- the bridge monitors `openclaw/device/user_speech_text` from Tuya hardware devices
+- this bridge consumes the command, calls OpenClaw, then publishes results
+- devices read results from topic `openclaw/server/response`
 
-# 启动 Mosquitto 服务
-sudo systemctl start mosquitto
-sudo systemctl enable mosquitto
-```
+## Installation
 
-### 2. 安装 Python 依赖
+Step 1 (no sudo): install Python dependency in user space.
 
-**方法 1：使用用户安装（推荐）**
 ```bash
 cd ~/mqtt_openclaw_bridge
 pip3 install --user -r requirements.txt
 ```
 
-**方法 2：使用系统包管理器**
-```bash
-sudo apt-get install python3-paho-mqtt
-```
-
-**方法 3：使用虚拟环境**
-```bash
-cd ~/mqtt_openclaw_bridge
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-```
-
-**方法 4：使用安装脚本**
-```bash
-cd ~/mqtt_openclaw_bridge
-./install.sh
-```
-
-### 3. 确保 OpenClaw 可用
+Step 2 (requires sudo): install and start Mosquitto broker.
 
 ```bash
-# 测试 OpenClaw 是否可用
-openclaw --version
+sudo bash install.sh install-mosquitto
 ```
 
-## 使用方法
+Manual equivalent:
 
-### 启动桥接服务
+```bash
+sudo apt-get update
+sudo apt-get install -y mosquitto mosquitto-clients
+sudo systemctl enable --now mosquitto
+```
+
+Optional: use the unified helper script (interactive):
 
 ```bash
 cd ~/mqtt_openclaw_bridge
-python3 mqtt_openclaw_bridge.py
+bash install.sh
 ```
 
-服务启动后会：
-- 连接到 MQTT Broker (默认: localhost:1883)
-- 订阅 `AI_CMD` topic
-- 等待接收指令
+## Run
 
-### 发送测试指令
-
-**方法 1：使用测试脚本（交互式）**
 ```bash
-python3 test_sender.py
+cd ~/mqtt_openclaw_bridge
+python3 openclaw_mqtt_bridge.py
 ```
 
-**方法 2：使用测试脚本（命令行）**
+## Test
+
+Use Mosquitto CLI only (no test scripts):
+
+Terminal A (watch responses):
+
 ```bash
-python3 test_sender.py "帮我生成一个AI情报分析的文件夹放在桌面上"
+mosquitto_sub -h localhost -t openclaw/server/response -v
 ```
 
-**方法 3：使用 mosquitto_pub 命令**
+Terminal B (send one message):
+
 ```bash
-mosquitto_pub -h localhost -t AI_CMD -m "帮我生成一个AI情报分析的文件夹放在桌面上"
+mosquitto_pub -h localhost -t openclaw/device/user_speech_text -m "Hello from MQTT"
 ```
 
-### 接收 AI 响应
+## Message format
 
-在另一个终端运行：
-```bash
-python3 test_receiver.py
+Plain text:
+
+```text
+Hello from MQTT
 ```
 
-或者使用 mosquitto_sub：
-```bash
-mosquitto_sub -h localhost -t AI_RET
-```
+JSON:
 
-## 消息格式
-
-### 发送到 AI_CMD (支持两种格式)
-
-**格式 1：纯文本**
-```
-帮我生成一个AI情报分析的文件夹放在桌面上
-```
-
-**格式 2：JSON 格式（推荐）**
 ```json
 {
-  "message": "帮我生成一个AI情报分析的文件夹放在桌面上",
-  "request_id": "unique_request_id_123"
+  "message": "Hello from MQTT",
+  "request_id": "req-123"
 }
 ```
 
-### 从 AI_RET 接收的格式
+Response example:
 
 ```json
 {
   "timestamp": "2026-02-13T10:30:00.123456",
-  "request_id": "unique_request_id_123",
-  "message": "帮我生成一个AI情报分析的文件夹放在桌面上",
-  "response": "AI 的完整响应内容...",
+  "request_id": "req-123",
+  "message": "Hello from MQTT",
+  "response": "...",
   "status": "success"
 }
 ```
 
-## 配置说明
+## Configuration (environment variables)
 
-可以在 `mqtt_openclaw_bridge.py` 中修改以下配置：
+- `MQTT_BROKER` (default in current code: `192.168.100.132`)
+- `MQTT_PORT` (default: `1883`)
+- `MQTT_TOPIC_IN_COMMAND` / `MQTT_TOPIC_CMD` (default: `openclaw/device/user_speech_text`)
+- `MQTT_TOPIC_OUT_RESULT` / `MQTT_TOPIC_RET` (default: `openclaw/server/response`)
+- `MQTT_CLIENT_ID` (optional; auto-generated if not set)
 
-```python
-MQTT_BROKER = "localhost"    # MQTT broker 地址
-MQTT_PORT = 1883              # MQTT broker 端口
-MQTT_TOPIC_CMD = "AI_CMD"    # 接收指令的 topic
-MQTT_TOPIC_RET = "AI_RET"    # 发送结果的 topic
-OPENCLAW_AGENT = "main"      # 使用的 agent ID
+## Network topology
+
+```mermaid
+flowchart LR
+  H["Tuya Hardware Device"]
+
+  subgraph CB["Clawbot PC"]
+    MB["MQTT Broker (Mosquitto)"]
+    BR["openclaw_mqtt_bridge.py"]
+    OC["OpenClaw CLI / Agent"]
+    MB --> BR
+    BR -- "cli: openclaw agent --agent main --message ..." --> OC
+    OC --> BR
+    BR --> MB
+  end
+
+  H -- "local net (MQTT)" --> MB
+  MB -- "server response topic" --> H
 ```
 
-## 测试完整流程
 
-### 终端 1：启动桥接服务
+Use `MQTT_BROKER` to choose the broker address seen by `openclaw_mqtt_bridge.py`:
+
+- If Mosquitto runs on the same machine as `openclaw_mqtt_bridge.py`, `localhost` (or `127.0.0.1`) is correct.
+- If the MQTT broker runs on another machine (LAN, remote host, or public internet), you must set a specific IP or domain.
+- Local broker on same host: `MQTT_BROKER=127.0.0.1`
+- Remote broker on LAN: `MQTT_BROKER=192.168.100.132`
+- Remote/public broker: `MQTT_BROKER=mqtt.example.com`
+
+Example:
+
 ```bash
-python3 mqtt_openclaw_bridge.py
+export MQTT_BROKER=192.168.1.50
+export MQTT_PORT=1883
+python3 openclaw_mqtt_bridge.py
 ```
 
-### 终端 2：启动结果接收器
+## LAN notes
+
+- Make sure broker host/port is reachable from clients.
+- If Mosquitto is local-only, configure it to listen on LAN interface (for example `0.0.0.0:1883`).
+- Config template path in this repo: `configs/mosquitto_listen_all.conf`.
+- Open firewall port `1883/tcp` when needed.
+
+## Troubleshooting
+
+- Broker connection error: `sudo systemctl status mosquitto`
+- Port check: `ss -tlnp | rg 1883`
+- OpenClaw check: `which openclaw && openclaw --version`
+- Logs: `tail -f mqtt_bridge.log`
+
+## Script commands
+
+`install.sh` is now the main script:
+
 ```bash
-python3 test_receiver.py
+bash install.sh                   # same as: bash install.sh all
+bash install.sh deps
+bash install.sh broker
+bash install.sh openclaw
+sudo bash install.sh install-mosquitto
+sudo bash install.sh mosquitto-listen-all
+bash install.sh test-help
 ```
 
-### 终端 3：发送测试指令
-```bash
-python3 test_sender.py "今天深圳天气怎么样"
-```
-
-## 日志
-
-服务运行日志会保存到 `mqtt_bridge.log` 文件中，同时也会输出到控制台。
-
-## 故障排查
-
-1. **无法连接到 MQTT Broker**
-   - 检查 Mosquitto 是否运行：`sudo systemctl status mosquitto`
-   - 检查端口是否被占用：`netstat -tlnp | grep 1883`
-
-2. **OpenClaw 命令执行失败**
-   - 检查 OpenClaw 是否安装：`which openclaw`
-   - 检查 OpenClaw 配置：`openclaw status`
-
-3. **消息发送但未收到响应**
-   - 检查桥接服务是否正常运行
-   - 查看日志文件：`tail -f mqtt_bridge.log`
-
-## 许可证
-
-MIT License
-
+`mosquitto-listen-all` uses template file: `configs/mosquitto_listen_all.conf`.

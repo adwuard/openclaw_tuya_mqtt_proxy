@@ -1,76 +1,178 @@
-#!/bin/bash
-# MQTT-OpenClaw 桥接安装脚本
+#!/usr/bin/env bash
+set -euo pipefail
 
-echo "=========================================="
-echo "MQTT-OpenClaw 桥接安装脚本"
-echo "=========================================="
-echo
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "${SCRIPT_DIR}"
 
-# 安装 Python 依赖
-echo "1. 安装 Python 依赖..."
-echo "   尝试使用 pip3 安装..."
-pip3 install --user -r requirements.txt 2>/dev/null || pip3 install --break-system-packages -r requirements.txt 2>/dev/null || {
-    echo "⚠️  系统 pip 安装失败，尝试使用 apt 安装..."
-    sudo apt-get update && sudo apt-get install -y python3-paho-mqtt 2>/dev/null || {
-        echo "❌ 请手动安装: pip3 install --user paho-mqtt"
-        echo "   或创建虚拟环境: python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt"
-    }
+usage() {
+  cat <<'EOF'
+Usage: bash install.sh [all|deps|broker|openclaw|install-mosquitto|mosquitto-listen-all|test-help]
+
+Commands:
+  all                   Run dependency + broker + openclaw checks (default)
+  deps                  Install/check Python dependencies
+  broker                Check/start mosquitto service if installed
+  openclaw              Check openclaw command
+  install-mosquitto     Install/start mosquitto (requires sudo)
+  mosquitto-listen-all  Write mosquitto config to listen on 0.0.0.0:1883
+  test-help             Print test commands
+EOF
 }
-if python3 -c "import paho.mqtt.client" 2>/dev/null; then
-    echo "✅ Python 依赖安装成功"
-else
-    echo "⚠️  请手动安装 paho-mqtt: pip3 install --user paho-mqtt"
-fi
 
-# 检查 MQTT Broker
-echo
-echo "2. 检查 MQTT Broker..."
-if command -v mosquitto &> /dev/null; then
-    echo "✅ Mosquitto 已安装"
-    
-    # 检查服务状态
-    if systemctl is-active --quiet mosquitto 2>/dev/null; then
-        echo "✅ Mosquitto 服务正在运行"
-    else
-        echo "⚠️  Mosquitto 服务未运行"
-        read -p "是否启动 Mosquitto 服务? (y/n) " -n 1 -r
-        echo
-        if [[ $REPLY =~ ^[Yy]$ ]]; then
-            sudo systemctl start mosquitto
-            sudo systemctl enable mosquitto
-            echo "✅ Mosquitto 服务已启动并设置为开机自启"
-        fi
-    fi
-else
-    echo "⚠️  Mosquitto 未安装"
-    echo "   安装命令: sudo apt-get install mosquitto mosquitto-clients"
-    echo "   或者使用其他 MQTT broker"
-fi
+maybe_apply_mosquitto_listen_all() {
+  if ! command -v mosquitto >/dev/null 2>&1; then
+    return
+  fi
+  read -r -p "Apply Mosquitto listen-all config now (0.0.0.0:1883)? (y/N) " ans
+  case "$ans" in
+    [Yy]*)
+      if [[ "${EUID}" -eq 0 ]]; then
+        setup_mosquitto_listen_all
+      else
+        sudo bash "${SCRIPT_DIR}/install.sh" mosquitto-listen-all
+      fi
+      ;;
+    *)
+      echo "Skipped Mosquitto listen-all config."
+      ;;
+  esac
+}
 
-# 检查 OpenClaw
-echo
-echo "3. 检查 OpenClaw..."
-if command -v openclaw &> /dev/null; then
-    echo "✅ OpenClaw 已安装"
-    openclaw --version | head -1
-else
-    echo "❌ OpenClaw 未安装或不在 PATH 中"
+install_python_deps() {
+  echo "[deps] Installing Python dependencies..."
+  pip3 install --user -r requirements.txt 2>/dev/null \
+    || pip3 install --break-system-packages -r requirements.txt 2>/dev/null \
+    || (sudo apt-get update && sudo apt-get install -y python3-paho-mqtt)
+
+  if ! python3 -c "import paho.mqtt.client" 2>/dev/null; then
+    echo "paho-mqtt is still missing."
+    echo "Install manually with: pip3 install --user paho-mqtt"
     exit 1
-fi
+  fi
+}
 
-echo
-echo "=========================================="
-echo "安装完成！"
-echo "=========================================="
-echo
-echo "使用方法："
-echo "1. 启动桥接服务:"
-echo "   python3 mqtt_openclaw_bridge.py"
-echo
-echo "2. 发送测试消息（新终端）:"
-echo "   python3 test_sender.py '你的消息'"
-echo
-echo "3. 接收响应（新终端）:"
-echo "   python3 test_receiver.py"
-echo
+check_mosquitto() {
+  echo "[broker] Checking MQTT broker..."
+  if ! command -v mosquitto >/dev/null 2>&1; then
+    echo "Mosquitto not found. Install with:"
+    echo "sudo apt-get install mosquitto mosquitto-clients"
+    return
+  fi
+
+  if systemctl is-active --quiet mosquitto 2>/dev/null; then
+    echo "Mosquitto is running."
+    return
+  fi
+
+  read -r -p "Mosquitto is installed but not running. Start it now? (y/N) " ans
+  case "$ans" in
+    [Yy]*)
+      sudo systemctl start mosquitto
+      sudo systemctl enable mosquitto
+      echo "Mosquitto started and enabled."
+      ;;
+    *)
+      echo "Skipped starting Mosquitto."
+      ;;
+  esac
+}
+
+check_openclaw() {
+  echo "[openclaw] Checking OpenClaw..."
+  if ! command -v openclaw >/dev/null 2>&1; then
+    echo "OpenClaw is not installed or not in PATH."
+    exit 1
+  fi
+  openclaw --version | sed -n '1p'
+}
+
+install_mosquitto() {
+  echo "[install-mosquitto] Installing Mosquitto..."
+  if [[ "${EUID}" -ne 0 ]]; then
+    echo "This command needs root privileges."
+    echo "Run: sudo bash install.sh install-mosquitto"
+    exit 1
+  fi
+
+  apt-get update
+  apt-get install -y mosquitto mosquitto-clients
+  systemctl enable --now mosquitto
+  echo "Mosquitto installed and started."
+}
+
+setup_mosquitto_listen_all() {
+  local template_file="${SCRIPT_DIR}/configs/mosquitto_listen_all.conf"
+  local conf_file="/etc/mosquitto/conf.d/listen_all.conf"
+  echo "[mosquitto-listen-all] Configuring ${conf_file} from template..."
+
+  if [[ "${EUID}" -ne 0 ]]; then
+    echo "This command needs root privileges."
+    echo "Run: sudo bash install.sh mosquitto-listen-all"
+    exit 1
+  fi
+
+  if [[ ! -f "${template_file}" ]]; then
+    echo "Template not found: ${template_file}"
+    exit 1
+  fi
+
+  cp "${template_file}" "${conf_file}"
+
+  systemctl restart mosquitto
+  if ! systemctl is-active --quiet mosquitto; then
+    echo "Mosquitto failed to start. Check:"
+    echo "journalctl -u mosquitto -n 100 --no-pager"
+    exit 1
+  fi
+
+  echo "Mosquitto is active. Port check:"
+  if command -v ss >/dev/null 2>&1; then
+    ss -tlnp | rg "1883" || true
+  elif command -v netstat >/dev/null 2>&1; then
+    netstat -tlnp | rg "1883" || true
+  else
+    echo "Neither ss nor netstat found; skip port check."
+  fi
+}
+
+print_test_help() {
+  cat <<'EOF'
+
+Test flow:
+1) python3 openclaw_mqtt_bridge.py
+2) mosquitto_sub -h localhost -t openclaw/server/response -v
+3) mosquitto_pub -h localhost -t openclaw/device/user_speech_text -m 'your message'
+
+Expected:
+- Bridge receives message from openclaw/device/user_speech_text
+- Bridge publishes response to openclaw/server/response
+EOF
+}
+
+run_all() {
+  echo "MQTT-OpenClaw bridge setup"
+  install_python_deps
+  check_mosquitto
+  maybe_apply_mosquitto_listen_all
+  check_openclaw
+  print_test_help
+}
+
+cmd="${1:-all}"
+case "${cmd}" in
+  all) run_all ;;
+  deps) install_python_deps ;;
+  broker) check_mosquitto ;;
+  openclaw) check_openclaw ;;
+  install-mosquitto) install_mosquitto ;;
+  mosquitto-listen-all) setup_mosquitto_listen_all ;;
+  test-help) print_test_help ;;
+  -h|--help|help) usage ;;
+  *)
+    echo "Unknown command: ${cmd}"
+    usage
+    exit 1
+    ;;
+esac
+
 
