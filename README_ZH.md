@@ -4,6 +4,12 @@
 
 English documentation: `README.md`
 
+## 快速介绍
+
+该服务是 TuyaOpen 硬件与 OpenClaw 之间的 MQTT 代理层。
+TuyaOpen 硬件提供物理交互能力（麦克风 + 扬声器）和内置 ASR，把识别后的用户语音文本发布到 MQTT。
+桥接服务从 `openclaw/device/user_speech_text` 读取用户提示词，转发给 OpenClaw agent，再把响应发布到 `openclaw/server/response` 供硬件侧播放。
+
 ## 功能说明
 
 - **监听 openclaw/device/user_speech_text topic**：接收 Tuya 硬件设备发送的指令

@@ -4,6 +4,12 @@ Minimal MQTT bridge that forwards messages to OpenClaw and publishes responses b
 
 Chinese documentation: `README_ZH.md`
 
+## Quick introduction
+
+This service is an MQTT proxy between TuyaOpen hardware and OpenClaw.
+TuyaOpen hardware provides the physical interface (microphone + speaker) and built-in ASR, then publishes recognized user speech text to MQTT.
+The bridge reads that prompt from `openclaw/device/user_speech_text`, forwards it to the OpenClaw agent, and publishes the response to `openclaw/server/response` for hardware playback.
+
 ## What it does
 
 - Subscribes to `openclaw/device/user_speech_text`
